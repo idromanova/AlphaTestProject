@@ -9,7 +9,7 @@ public class RateModel {
     private String base;
     private HashMap<String, Double> rates;
 
-    public Double getRates(String key) {
-        return rates.get(key);
+    public HashMap<String, Double> getRates() {
+        return rates;
     }
 }
