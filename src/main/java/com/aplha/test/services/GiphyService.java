@@ -10,6 +10,6 @@ public class GiphyService {
     GiphyClient giphyClient;
     public String getUrl(boolean response)
     {
-        return response? giphyClient.getGIF("rich").getUrl() : giphyClient.getGIF("broke").getUrl();
+        return response? giphyClient.getGIF("rich").getData().getUrl() : giphyClient.getGIF("broke").getData().getUrl();
     }
 }
