@@ -11,7 +11,7 @@ public class TestController {
 
     @Autowired
     RateService rateService;
-ddd
+
     @GetMapping("/test")
         public String test() {
             return rateService.getRate().toString();
