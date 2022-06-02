@@ -14,6 +14,6 @@ public class TestController {
 
     @GetMapping("/test")
         public String test() {
-            return rateService.getRate().toString();
+            return rateService.getRate() ? "true": "false";
         }
 }

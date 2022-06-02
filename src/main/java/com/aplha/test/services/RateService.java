@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Service
 public class RateService {
@@ -22,14 +24,14 @@ public class RateService {
         public Boolean getRate(){
             double thisDay = rateFeignClient
                     .getInfoByThisDay()
-                    .getRates(rateName);
+                    .getRates().get(rateName);
 
             LocalDate today = LocalDate.now();
             LocalDate yesterday = today.minusDays(1);
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-            double previousDay = rateFeignClient.getInfoByPreviousDay(formatter.format(yesterday)).getRates(rateName);
+            DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            double previousDay = rateFeignClient.getInfoByPreviousDay(yesterday.format(formatter)).getRates().get(rateName);
 
-            return thisDay>previousDay?true:false;
+            return thisDay > previousDay;
 
     }
 }
