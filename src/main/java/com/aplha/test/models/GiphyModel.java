@@ -1,13 +1,12 @@
 package com.aplha.test.models;
 
 public class GiphyModel {
-    private String type;
+    private ImageModel images;
     private String id;
     private String slug;
     private String url;
 
-
-    public String getUrl() {
-        return url;
+    public ImageModel getImages() {
+        return images;
     }
 }

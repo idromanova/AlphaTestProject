@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 @Controller
-//@RequestMapping("/api")
+@RequestMapping("/api")
 public class TestController {
 
-//    @Autowired
-//    RateService rateService;
-//    @Autowired
-//    GiphyService giphyService;
-//
-//    @GetMapping("/api")
+    @Autowired
+    RateService rateService;
+    @Autowired
+    GiphyService giphyService;
+
+//    @GetMapping("/test")
 //    //@RequestMapping("/api")
 //   // @ResponseBody
 //    public String test() {
@@ -29,9 +29,9 @@ public class TestController {
 //               return "";
 //        }
 
-        @GetMapping("/greeting")
-        public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-            model.addAttribute("name", name);
-            return "index";
+        @GetMapping("/test")
+        public String test(@RequestParam(name="src", required=false) String src, Model model) {
+            model.addAttribute("src", giphyService.getUrl(rateService.getRate()));
+            return "resultPage";
     }
 }
