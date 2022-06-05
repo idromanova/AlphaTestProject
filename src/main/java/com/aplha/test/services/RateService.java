@@ -18,18 +18,18 @@ public class RateService {
         @Autowired
         RateClient rateFeignClient;
 
-        @Value("${client.rate.symbol}")
-        private String rateName;
+//        @Value("${client.rate.symbol}")
+//        private String rateName;
 
-        public Boolean getRate(){
+        public Boolean getRate(String symbol){
             double thisDay = rateFeignClient
-                    .getInfoByThisDay()
-                    .getRates().get(rateName);
+                    .getInfoByThisDay(symbol)
+                    .getRates().get(symbol);
 
             LocalDate today = LocalDate.now();
             LocalDate yesterday = today.minusDays(1);
             DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            double previousDay = rateFeignClient.getInfoByPreviousDay(yesterday.format(formatter)).getRates().get(rateName);
+            double previousDay = rateFeignClient.getInfoByPreviousDay(yesterday.format(formatter), symbol).getRates().get(symbol);
 
             return thisDay > previousDay;
 

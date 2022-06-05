@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "rateFeignClient", url = "${client.rate.baseUrl}")
 public interface RateClient {
 
-    @GetMapping("latest.json?app_id=${client.rate.app_key}&symbols=${client.rate.symbol}")
-    RateModel getInfoByThisDay();
+    @GetMapping("latest.json?app_id=${client.rate.app_key}&base=${client.rate.base}&symbols={symbol}")
+    RateModel getInfoByThisDay(String symbol);
 
-    @GetMapping("historical/{date}.json?app_id=${client.rate.app_key}&symbols=${client.rate.symbol}")
-    RateModel getInfoByPreviousDay(@RequestParam String date);
+    @GetMapping("historical/{date}.json?app_id=${client.rate.app_key}&base=${client.rate.base}&symbols={symbol}")
+    RateModel getInfoByPreviousDay(@RequestParam String date, String symbol);
 
 }

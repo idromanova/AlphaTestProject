@@ -1,9 +1,9 @@
 package com.aplha.test.models;
 
 public class ImageModel {
-    private String url;
+    private OriginalModel original;
 
-    public String getUrl() {
-        return url;
+    public OriginalModel getOriginal() {
+        return original;
     }
 }
