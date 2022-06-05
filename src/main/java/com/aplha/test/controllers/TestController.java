@@ -17,7 +17,7 @@ public class TestController {
     GiphyService giphyService;
 
     @GetMapping("/rates/{symbol}")
-    public String test(@PathVariable String symbol, Model model) {
+    public String getResult(@PathVariable String symbol, Model model) {
         model.addAttribute("src", giphyService.getUrl(rateService.getRate(symbol)));
         return "resultPage";
     }

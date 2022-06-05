@@ -15,14 +15,28 @@ ext {
 	set('springCloudVersion', "2021.0.3")
 }
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.7'
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.1.2'
+	implementation 'junit:junit:4.13.1'
 
-	implementation 'io.github.openfeign:feign-httpclient'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.7'
+	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner:3.1.2'
+	testImplementation 'org.mockito:mockito-core:4.6.1'
+	//testImplementation(platform('org.junit:junit-bom:5.8.2'))
+	//testImplementation('org.junit.jupiter:junit-jupiter')
+//	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+//	testImplementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+	//testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+	testImplementation("org.junit.jupiter:junit-jupiter-params:5.8.1")
+	testImplementation("org.junit.platform:junit-platform-suite:1.8.1")
+
+
+	implementation 'io.github.openfeign:feign-httpclient:11.8'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.6.7'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.6.7'
 }
 
 dependencyManagement {

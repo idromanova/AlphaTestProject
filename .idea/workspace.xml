@@ -4,27 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c177f393-9854-4580-b559-a60fb1232b5b" name="Changes" comment="giphy with url">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/OriginalModel.java" afterDir="false" />
+    <list default="true" id="c177f393-9854-4580-b559-a60fb1232b5b" name="Changes" comment="before testing">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/resultPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/resultPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/feighClients/RateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/feighClients/RateClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/feighClients/GiphyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/feighClients/GiphyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/GiphyFullModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/GiphyFullModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/GiphyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/GiphyModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/ImageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/ImageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/OriginalModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/OriginalModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/RateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/models/RateModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/services/GiphyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/services/GiphyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aplha/test/services/RateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aplha/test/services/RateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/resultPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/resultPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aplha/test/TestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aplha/test/TestApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,9 +107,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2244582" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -112,7 +117,7 @@
       <recent name="D:\Documents\GitHub\AlphaTestProject\src\main\resources\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AlphaTestProject [bootRun]">
+  <component name="RunManager" selected="Gradle.TestApplicationTests">
     <configuration name="TestApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aplha.test.TestApplication" />
       <module name="AlphaTestProject.test.main" />
@@ -147,8 +152,52 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TestApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.aplha.test.TestApplicationTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestApplicationTests.testRateService" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.aplha.test.TestApplicationTests.testRateService&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestApplicationTests" />
+        <item itemvalue="Gradle.TestApplicationTests.testRateService" />
         <item itemvalue="Gradle.AlphaTestProject [bootRun]" />
       </list>
     </recent_temporary>
@@ -190,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654186957420</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="before testing">
+      <created>1654441172667</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654441172667</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,28 +266,7 @@
     <MESSAGE value="rate request is completed" />
     <MESSAGE value="giphy without tag" />
     <MESSAGE value="giphy with url" />
-    <option name="LAST_COMMIT_MESSAGE" value="giphy with url" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aplha/test/services/RateService.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aplha/test/services/GiphyService.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aplha/test/services/GiphyService.java</url>
-          <line>9</line>
-          <properties field="giphyClient" class="com.aplha.test.services.GiphyService" />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="before testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="before testing" />
   </component>
 </project>

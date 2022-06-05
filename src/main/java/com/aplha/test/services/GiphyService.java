@@ -8,9 +8,18 @@ import org.springframework.stereotype.Service;
 public class GiphyService {
     @Autowired
     GiphyClient giphyClient;
+
     public String getUrl(boolean response)
     {
-        return response? giphyClient.getGIF("rich").getData().getImages().getOriginal().getUrl() :
-                giphyClient.getGIF("broke").getData().getImages().getOriginal().getUrl();
+        return response? giphyClient.getGIF("rich")
+                .getData()
+                .getImages()
+                .getOriginal()
+                .getUrl()
+                : giphyClient.getGIF("broke")
+                .getData()
+                .getImages()
+                .getOriginal()
+                .getUrl();
     }
 }
