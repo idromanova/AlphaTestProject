@@ -3,35 +3,30 @@ package com.aplha.test.controllers;
 import com.aplha.test.services.GiphyService;
 import com.aplha.test.services.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 @Controller
-//@RequestMapping("/api")
+@RequestMapping("/api/romanova/alpha")
 public class TestController {
 
-//    @Autowired
-//    RateService rateService;
-//    @Autowired
-//    GiphyService giphyService;
-//
-//    @GetMapping("/api")
-//    //@RequestMapping("/api")
-//   // @ResponseBody
-//    public String test() {
-//        try {
-//            return "index.html";
-//            //giphyService.getUrl(rateService.getRate()));
-//
-//        } catch (Exception e) {
-//               return "";
-//        }
+    @Autowired
+    RateService rateService;
+    @Autowired
+    GiphyService giphyService;
 
-        @GetMapping("/greeting")
-        public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-            model.addAttribute("name", name);
-            return "index";
+    @GetMapping("/rates/{symbol}")
+    public String getResult(@PathVariable String symbol, Model model) {
+        String defaultResult = "resultPage";
+        try {
+            model.addAttribute("src", giphyService.getUrl(rateService.getRate(symbol)));
+        }
+        catch (Exception e)
+        {
+            model.addAttribute("src", e.getMessage());
+            defaultResult="index";
+        }
+        return defaultResult;
     }
 }
