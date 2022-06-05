@@ -30,15 +30,15 @@ class TestApplicationTests {
 	private GiphyService giphyService;
 
 	@Test
-	void testRateServiceWithFalseResult() {
+	void testRateServiceWithFalseResult() throws Exception {
 		RateModel rateModel = new RateModel();
 		HashMap<String, Double> testData = new HashMap<>();
 		testData.put("AMD", 67.5);
 		rateModel.setRates(testData);
 
 		RateModel rateModel2 = new RateModel();
-		HashMap<String, Double> testData2= new HashMap<>();
-		testData2.put("AMD", 67.7);
+		HashMap<String, Double> testData2 = new HashMap<>();
+		testData2.put("AMD", 67.8);
 		rateModel2.setRates(testData2);
 
 		Mockito.when(rateClient.getInfoByThisDay(Mockito.anyString())).thenReturn(rateModel);
@@ -48,15 +48,15 @@ class TestApplicationTests {
 	}
 
 	@Test
-	void testRateServiceWithTrueResult() {
+	void testRateServiceWithTrueResult() throws Exception {
 		RateModel rateModel = new RateModel();
 		HashMap<String, Double> testData = new HashMap<>();
 		testData.put("AMD", 67.9);
 		rateModel.setRates(testData);
 
 		RateModel rateModel2 = new RateModel();
-		HashMap<String, Double> testData2= new HashMap<>();
-		testData2.put("AMD", 67.7);
+		HashMap<String, Double> testData2 = new HashMap<>();
+		testData2.put("AMD", 67.5);
 		rateModel2.setRates(testData2);
 
 		Mockito.when(rateClient.getInfoByThisDay(Mockito.anyString())).thenReturn(rateModel);
@@ -65,11 +65,27 @@ class TestApplicationTests {
 		assertEquals(true, rateService.getRate("AMD"));
 	}
 
-	@Test
-	void testGiphyService() {
+	GiphyModel createModel(String url)
+	{
+		OriginalModel originalModel = new OriginalModel();
+		originalModel.setUrl(url);
 
-		GiphyFullModel broke = new GiphyFullModel(new GiphyModel(new ImageModel( new OriginalModel("https://media.giphy.com/media/1ppudqsvJAWPa63iLU/giphy.gif" ))));
-		GiphyFullModel rich = new GiphyFullModel(new GiphyModel(new ImageModel( new OriginalModel("https://media.giphy.com/media/SsTcO55LJDBsI/giphy.gif" ))));
+		ImageModel imageModel = new ImageModel();
+		imageModel.setOriginal(originalModel);
+
+		GiphyModel giphyModel = new GiphyModel();
+		giphyModel.setImages(imageModel);
+
+		return giphyModel;
+	}
+
+	@Test
+	void testGiphyService() throws Exception {
+		GiphyFullModel broke = new GiphyFullModel();
+		broke.setData(createModel("https://media.giphy.com/media/1ppudqsvJAWPa63iLU/giphy.gif"));
+
+		GiphyFullModel rich = new GiphyFullModel();
+		rich.setData(createModel("https://media.giphy.com/media/SsTcO55LJDBsI/giphy.gif"));
 
 		Mockito.when(giphyClient.getGIF("broke")).thenReturn(broke);
 		Mockito.when(giphyClient.getGIF("rich")).thenReturn(rich);

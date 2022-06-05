@@ -3,8 +3,7 @@ package com.aplha.test.models;
 public class GiphyModel {
     private ImageModel images;
 
-    public GiphyModel( ImageModel images)
-    {
+    public void setImages(ImageModel images) {
         this.images = images;
     }
 

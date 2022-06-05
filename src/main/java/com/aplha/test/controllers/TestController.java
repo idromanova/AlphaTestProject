@@ -18,7 +18,15 @@ public class TestController {
 
     @GetMapping("/rates/{symbol}")
     public String getResult(@PathVariable String symbol, Model model) {
-        model.addAttribute("src", giphyService.getUrl(rateService.getRate(symbol)));
-        return "resultPage";
+        String defaultResult = "resultPage";
+        try {
+            model.addAttribute("src", giphyService.getUrl(rateService.getRate(symbol)));
+        }
+        catch (Exception e)
+        {
+            model.addAttribute("src", e.getMessage());
+            defaultResult="index";
+        }
+        return defaultResult;
     }
 }

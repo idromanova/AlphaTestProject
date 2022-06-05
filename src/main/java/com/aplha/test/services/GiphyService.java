@@ -2,6 +2,7 @@ package com.aplha.test.services;
 
 import com.aplha.test.feighClients.GiphyClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -9,9 +10,11 @@ public class GiphyService {
     @Autowired
     GiphyClient giphyClient;
 
-    public String getUrl(boolean response)
-    {
-        return response? giphyClient.getGIF("rich")
+    @Value("${client.rate.baseUrl}")
+    String url;
+
+    public String getUrl(boolean response) throws Exception { try {
+        return response ? giphyClient.getGIF("rich")
                 .getData()
                 .getImages()
                 .getOriginal()
@@ -21,5 +24,10 @@ public class GiphyService {
                 .getImages()
                 .getOriginal()
                 .getUrl();
+        }
+        catch (Exception e)
+        {
+            throw new Exception("Ошибка получения данных с сервера " + url);
+        }
     }
 }

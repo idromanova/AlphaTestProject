@@ -2,6 +2,7 @@ package com.aplha.test.services;
 
 import com.aplha.test.feighClients.RateClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -13,23 +14,32 @@ public class RateService {
         @Autowired
         RateClient rateFeignClient;
 
-        public Boolean getRate(String symbol){
-            symbol = symbol.toUpperCase(Locale.ROOT);
+        @Value("${client.giphy.baseUrl}")
+        String url;
 
-            double thisDay = rateFeignClient
-                    .getInfoByThisDay(symbol)
-                    .getRates()
-                    .get(symbol);
+        public Boolean getRate(String symbol) throws Exception {
+            try {
+                symbol = symbol.toUpperCase(Locale.ROOT);
 
-            LocalDate today = LocalDate.now();
-            LocalDate yesterday = today.minusDays(1);
-            DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                double thisDay = rateFeignClient
+                        .getInfoByThisDay(symbol)
+                        .getRates()
+                        .get(symbol);
 
-            double previousDay = rateFeignClient
-                    .getInfoByPreviousDay(yesterday.format(formatter), symbol)
-                    .getRates()
-                    .get(symbol);
+                LocalDate today = LocalDate.now();
+                LocalDate yesterday = today.minusDays(1);
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-            return thisDay > previousDay;
+                double previousDay = rateFeignClient
+                        .getInfoByPreviousDay(yesterday.format(formatter), symbol)
+                        .getRates()
+                        .get(symbol);
+
+                return thisDay > previousDay;
+            }
+            catch (Exception e)
+            {
+               throw new Exception("Ошибка получения данных с сервера " + url);
+            }
     }
 }
