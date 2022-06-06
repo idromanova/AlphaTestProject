@@ -10,7 +10,7 @@
 2. Unzip downloaded archive.
 
 ## Configuration
-To configurate project open the file `src/main/resources/application.properties` in text editor.
+To configurate project open the file `/src/main/resources/application.properties` in text editor.
 
 | Property | Description | Value By Default |
 | ------ | ------ | ------ |
