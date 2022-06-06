@@ -3,7 +3,7 @@
 
 ##  Prerequirements
 - Java 11
-- Gradle
+- Gradle 6+
 
 ## Installation and Start
 1. Download project from Git.
