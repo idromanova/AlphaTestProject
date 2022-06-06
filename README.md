@@ -47,3 +47,7 @@ C:\AlphaTestProject-master>java -jar build\libs\test-0.0.1-SNAPSHOT.jar
 ## Using
 1. Open your browser and type `http://localhost:8081/api/romanova/alpha/rates/amd` in the address bar. When installed correctly, a GIF will be displayed.
 2. Remove `amd` and type another currency to show change in this currency compared to yesterday.
+
+## Docker
+You can also run the project using Docker 
+https://hub.docker.com/r/iromanova/alpha-test-project
