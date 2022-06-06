@@ -41,7 +41,7 @@ C:\AlphaTestProject-master>gradle build
 4. Make sure a folder `build` has been created in the project folder.
 5. Run `java -jar` to start the project:
 ```sh
-java -jar build\libs\test-0.0.1-SNAPSHOT.jar
+C:\AlphaTestProject-master>java -jar build\libs\test-0.0.1-SNAPSHOT.jar
 ```
 
 ## Using
